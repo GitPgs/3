@@ -1,36 +1,22 @@
 package com.example.assignment
 
-import android.content.Intent
-import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-
-
+class Hr : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_hr)
+
         setUpTabBar()
-
-        val btn: Button =findViewById(R.id.other)
-        btn.setOnClickListener(){
-            val intent = Intent(this,Hr::class.java)
-            startActivity(intent)
-
-
-        }
-
-
     }
-
 
     private fun setUpTabBar()
     {
-        val adapter = TabAdapter(this, tabLayout.tabCount)
+        val adapter = TabAdapterHr(this, tabLayout.tabCount)
         viewPager.adapter = adapter
 
         viewPager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback()
