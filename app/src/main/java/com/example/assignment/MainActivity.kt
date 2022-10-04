@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setUpTabBar()
 
-        val btn: Button =findViewById(R.id.other)
-        btn.setOnClickListener(){
-            val intent = Intent(this,Hr::class.java)
-            startActivity(intent)
-
-
-        }
+//        val btn: Button =findViewById(R.id.other)
+//        btn.setOnClickListener(){
+//            val intent = Intent(this,Hr::class.java)
+//            startActivity(intent)
+//
+//
+//        }
 
 
     }

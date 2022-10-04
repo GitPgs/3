@@ -1,10 +1,13 @@
 package com.example.assignment
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 
 
 class Profile : Fragment() {
@@ -15,7 +18,17 @@ class Profile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+      val v =inflater.inflate(R.layout.fragment_profile, container, false)
+        val btnNext = v.findViewById<Button>(R.id.another)
+//
+//        btnNext.setOnClickListener(){
+//            val intent = Intent(activity, HrActivity::class.java)
+//            startActivity(intent)
+//
+//
+//        }
+
+        return v
     }
 
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829776429359",
+    "firebase_url": "https://mobileassignment-a929f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mobileassignment-a929f",
+    "storage_bucket": "mobileassignment-a929f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829776429359:android:51e0a3b47f3b6adc97a1da",
+        "android_client_info": {
+          "package_name": "com.example.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829776429359-uf6faqvaasvpqat34ho78c1dae9u1k27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3M9k3ObnYUJCj5y00DROnjIiolOTfPh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829776429359-uf6faqvaasvpqat34ho78c1dae9u1k27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
