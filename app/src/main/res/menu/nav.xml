@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/job"
+        android:icon="@drawable/jobunfill"
+        android:title="Homepage"/>
+
+    <item
+        android:id="@+id/company"
+        android:icon="@drawable/companyunfill"
+        android:title="Searching"/>
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/starrunfill"
+        android:title="Food Bank"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profileunfill"
+        android:title="User Profile"/>
+</menu>
