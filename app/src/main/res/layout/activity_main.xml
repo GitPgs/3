@@ -17,77 +17,77 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
-        android:layout_width="531dp"
-        android:layout_height="756dp"
-        tools:layout_editor_absoluteX="-74dp"
-        tools:layout_editor_absoluteY="151dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-25dp">
 
 
     </androidx.viewpager2.widget.ViewPager2>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:tabGravity="fill"
+        app:tabIndicatorColor="?colorPrimary"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/jon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/viewPager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:icon="@drawable/jobunfill"
+            android:text="Job" />
 
-            app:tabGravity="fill"
-            app:tabIndicatorColor="?colorPrimary"
-            app:tabMaxWidth="0dp"
-            app:tabMode="fixed">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/companyunfill"
+            android:text="Company" />
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/jon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/jobunfill"
-                android:text="Job" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/starrunfill"
+            android:text="Saved" />
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/company"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/companyunfill"
-                android:text="Company" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/profileunfill"
+            android:text="Profile" />
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/star"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/starrunfill"
-                android:text="Saved" />
+    </com.google.android.material.tabs.TabLayout>
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/profileunfill"
-                android:text="Profile" />
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/main"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
 
-        </com.google.android.material.tabs.TabLayout>
+    <!--    </FrameLayout>-->
 
-<!--    <FrameLayout-->
-<!--        android:id="@+id/main"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/nav"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="#3F51B5"-->
+    <!--        app:itemIconTint="#ffff"-->
+    <!--        app:itemTextColor="#ffff"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:menu="@menu/nav">-->
 
-<!--    </FrameLayout>-->
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/nav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#3F51B5"-->
-<!--        app:itemIconTint="#ffff"-->
-<!--        app:itemTextColor="#ffff"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:menu="@menu/nav">-->
-
-<!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+    <!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
