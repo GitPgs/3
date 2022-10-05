@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-        val btn: Button =findViewById(R.id.other)
-        btn.setOnClickListener(){
-            val intent = Intent(this,appHistory::class.java)
-            startActivity(intent)
-
-
-        }
+//
+//        val btn: Button =findViewById(R.id.other)
+//        btn.setOnClickListener(){
+//            val intent = Intent(this,appHistory::class.java)
+//            startActivity(intent)
+//
+//
+//        }
 
 
     }
