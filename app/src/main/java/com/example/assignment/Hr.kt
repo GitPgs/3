@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.activity_hr.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_hr.tabLayout as tabLayout1
+import kotlinx.android.synthetic.main.activity_main.viewPager as viewPager1
 
 class Hr : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

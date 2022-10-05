@@ -1,15 +1,20 @@
 package com.example.assignment
 
+import android.app.Activity
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.view.*
+import java.util.*
 
 
 class Job : Fragment() ,JobAdapter.OnItemClickListener{
@@ -20,7 +25,7 @@ class Job : Fragment() ,JobAdapter.OnItemClickListener{
         JobList("1","a.png","Manager","PGS","Penang","internship","12/2/2022"),
         JobList("2","a.png","Supervisor","PGS","Penang","parttime","12/2/2022"),
     )
-private var jobtype =  arrayOf("X","Y","Z")
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,13 +40,16 @@ val filter = view.findViewById<Button>(R.id.btnFilter)
         val myRecyclerView = view.findViewById<RecyclerView>(R.id.recJob)
         database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("Student")
-
+        var checkedJobType = booleanArrayOf(false, false, false)
+        var checkedLocation = booleanArrayOf(false, false, false)
         filter.setOnClickListener(){
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Filter BY:")
             val FilterBy = arrayOf("jobType", "location", "Salary")
             builder.setSingleChoiceItems(FilterBy, -1) { dialogmain, which ->
+
+
            if(FilterBy[which]=="jobType"){
 
 
@@ -50,10 +58,10 @@ val filter = view.findViewById<Button>(R.id.btnFilter)
 
 // Add a checkbox list
                val JobType= arrayOf("internship","partTime","fullTime")
-               val checkedItems = booleanArrayOf(false, false, false)
-               builder.setMultiChoiceItems(JobType, checkedItems) { dialogJobtype, jobtypeSelected, isChecked ->
+//               val checkedItems = booleanArrayOf(false, false, false)
+               builder.setMultiChoiceItems(JobType,checkedJobType) { dialogJobtype, jobtypeSelected, isChecked ->
                    //JobType[jobtypeSelected] -> means
-//                   checkedItems[0]->false , checkedItems -> false  false false
+//                  checkedJobType[0]->false , checkedJobType -> false  false false
                }
 
 
@@ -62,35 +70,37 @@ val filter = view.findViewById<Button>(R.id.btnFilter)
 myRef.get()
     .addOnSuccessListener {
 all->
-if(!checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
+//if(!checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
+//
+//    for (i in  all.children) {
+//        JobList += JobList(
+//            i.child("id").value.toString(),
+//            "a.png",
+//            i.child("pos").value.toString(),
+//            i.child("compName").value.toString(),
+//            i.child("compLocation").value.toString(),
+//            i.child("date").value.toString()
+//        )
+//
+//
+//        var myAdapter = JobAdapter(JobList, this)
+//        myRecyclerView.adapter = myAdapter
+//
+//        myRecyclerView.layoutManager = LinearLayoutManager(activity)
+//        //  myRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+////      myRecyclerView.layoutManager = GridLayoutManager(this,2)
+//        myRecyclerView.setHasFixedSize(true)
+//
+//    }
+//
+//}
+if(checkedJobType[0] && !checkedJobType[1] && !checkedJobType[2]){
 
-    for (i in  all.children) {
-        JobList += JobList(
-            i.child("id").value.toString(),
-            "a.png",
-            i.child("pos").value.toString(),
-            i.child("compName").value.toString(),
-            i.child("compLocation").value.toString(),
-            i.child("date").value.toString()
-        )
-
-
-        var myAdapter = JobAdapter(JobList, this)
-        myRecyclerView.adapter = myAdapter
-
-        myRecyclerView.layoutManager = LinearLayoutManager(activity)
-        //  myRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//      myRecyclerView.layoutManager = GridLayoutManager(this,2)
-        myRecyclerView.setHasFixedSize(true)
-
-    }
-
-}
-if(checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
+    JobList.clear()
     for (i in  all.children) {
 
         if (i.child("jobType").value.toString()=="internship"){
-            JobList.clear()
+i.child("jobType").value.toString()=="internship" && i.child("complocation").value.toString()=="penang"
             JobList += JobList(
                 i.child("id").value.toString(),
                 "a.png",
@@ -129,8 +139,104 @@ if(checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
            }
 
 
+
+                if(FilterBy[which]=="location"){
+
+
+                    val builder = AlertDialog.Builder(context)
+                    builder.setTitle("Choose location to be filter :")
+
+// Add a checkbox list
+                    val Location= arrayOf("penang","Kuala Lumpur","Perak")
+//                  var checkedLocation2 =checkedLocation
+                    builder.setMultiChoiceItems(Location, checkedLocation) { dialogLocation, locationSelected, isChecked ->
+
+                    //Location[jobtypeSelected] -> means
+//                   checkedLocation[0]->false , checkedLocation -> false  false false
+                    }
+
+
+                    builder.setPositiveButton("OK") { dialogLocation,locationSelected ->
+
+                        myRef.get()
+                            .addOnSuccessListener {
+                                    all->
+//                                if(!checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
+//
+//                                    for (i in  all.children) {
+//                                        JobList += JobList(
+//                                            i.child("id").value.toString(),
+//                                            "a.png",
+//                                            i.child("pos").value.toString(),
+//                                            i.child("compName").value.toString(),
+//                                            i.child("compLocation").value.toString(),
+//                                            i.child("date").value.toString()
+//                                        )
+//
+//
+//                                        var myAdapter = JobAdapter(JobList, this)
+//                                        myRecyclerView.adapter = myAdapter
+//
+//                                        myRecyclerView.layoutManager = LinearLayoutManager(activity)
+//                                        //  myRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+////      myRecyclerView.layoutManager = GridLayoutManager(this,2)
+//                                        myRecyclerView.setHasFixedSize(true)
+//
+//                                    }
+//
+//                                }
+                                if(checkedLocation[0] && !checkedLocation[1] && !checkedLocation[2]){
+                                    JobList.clear()
+                                    for (i in  all.children) {
+
+                                        if (i.child("compLocation").value.toString()=="penang"){
+
+                                            JobList += JobList(
+                                                i.child("id").value.toString(),
+                                                "a.png",
+                                                i.child("pos").value.toString(),
+                                                i.child("compName").value.toString(),
+                                                i.child("compLocation").value.toString(),
+                                                i.child("date").value.toString()
+                                            )
+                                        }
+
+
+
+                                        var myAdapter = JobAdapter(JobList, this)
+                                        myRecyclerView.adapter = myAdapter
+
+                                        myRecyclerView.layoutManager = LinearLayoutManager(activity)
+                                        //  myRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+//      myRecyclerView.layoutManager = GridLayoutManager(this,2)
+                                        myRecyclerView.setHasFixedSize(true)
+
+                                    }
+
+
+
+                                }
+
+                            }
+
+                    }
+                    builder.setNegativeButton("Cancel"){ dialogLocation,locationSelected ->
+
+//                        checkedLocation= checkedLocation2
+                    }
+
+
+                    val dialogLocation= builder.create()
+                    dialogLocation.show()
+                    dialogmain.dismiss()
+                }
+
+
             }
-            builder.setNegativeButton("Cancel", null)
+            builder.setNegativeButton("Cancel"){  dialogJobtype,jobtypeSelected ->
+
+
+            }
 
             val dialogmain = builder.create()
             dialogmain.show()
@@ -330,12 +436,16 @@ if(checkedItems[0] && !checkedItems[1] && !checkedItems[2]){
 //        return super.onOptionsItemSelected(item)
 //    }
 
+
+
     override fun itemClick(position: Int) {
         val selectStudent = JobList[position]
 
         Toast.makeText(activity, selectStudent.pos, Toast.LENGTH_SHORT).show()
+        val intent = Intent(activity,ViewJobDetails::class.java)
+        intent.putExtra("Job_Id",selectStudent.id)
 
-        // thiis not sure
+        startActivity(intent)
     }
 
 

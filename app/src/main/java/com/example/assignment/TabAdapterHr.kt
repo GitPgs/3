@@ -12,10 +12,10 @@ class TabAdapterHr(activity: FragmentActivity, private val tabCount: Int) : Frag
     {
         return when (position)
         {
-            0 -> Hrjob()
-            1 -> Hrcompany()
-            2 -> Hrprofile()
-            else -> Hrjob()
+            0 -> Applicant()
+            1 -> Job_HR()
+            2 -> Profile_HR()
+            else -> Applicant()
         }
     }
 

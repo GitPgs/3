@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".appHistory"
+            android:exported="false"
+            android:label="@string/title_activity_app_history"
+            android:theme="@style/Theme.Assignment.NoActionBar" />
+        <activity
+            android:name=".ViewJobDetails"
+            android:exported="false" />
+        <activity
+            android:name=".viewDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Hraccept"
+            android:exported="false" />
+        <activity
             android:name=".Hr"
             android:exported="false" />
         <activity

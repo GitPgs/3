@@ -5,8 +5,13 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabItem
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.activity_hr.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.tabLayout as tabLayout1
+import kotlinx.android.synthetic.main.activity_main.viewPager as viewPager1
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpTabBar()
+
+
+
+
+
+
+
 
 //        val btn: Button =findViewById(R.id.other)
 //        btn.setOnClickListener(){

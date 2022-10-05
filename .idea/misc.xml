@@ -5,18 +5,30 @@
       <map>
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.279" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/drawable/jobunfill.xml" value="0.279" />
-        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_hr.xml" value="0.2" />
-        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_app_history.xml" value="0.20092592592592592" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_hr.xml" value="0.176" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_hraccept.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_view_details.xml" value="0.1" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/activity_view_job_details.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/applicant_view.xml" value="0.2734375" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_applicant.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_company.xml" value="0.1" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_d.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_hrcompany.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_hrjob.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_hrprofile.xml" value="0.1638888888888889" />
-        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_job.xml" value="0.4" />
-        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_job.xml" value="0.28935185185185186" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_saved.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/fragment_viewjob_detail.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/history_view.xml" value="0.20092592592592592" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/hracception.xml" value="0.2734375" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/job_view.xml" value="0.4" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/save_view.xml" value="0.2734375" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/layout/test.xml" value="0.2734375" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/menu/fiter_menu.xml" value="0.264" />
+        <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/menu/nav.xml" value="0.1" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/mipmap-anydpi-v26/Company.xml" value="0.279" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/mipmap-anydpi-v26/CompanyCli.xml" value="0.137" />
         <entry key="..\:/Users/spgse/Desktop/Assignment/app/src/main/res/mipmap-anydpi-v26/CompanyCli_round.xml" value="0.137" />

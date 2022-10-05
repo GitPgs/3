@@ -20,13 +20,10 @@ class Profile : Fragment() {
         // Inflate the layout for this fragment
       val v =inflater.inflate(R.layout.fragment_profile, container, false)
         val btnNext = v.findViewById<Button>(R.id.another)
-//
-//        btnNext.setOnClickListener(){
-//            val intent = Intent(activity, HrActivity::class.java)
-//            startActivity(intent)
-//
-//
-//        }
+
+
+
+
 
         return v
     }
